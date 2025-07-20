@@ -10,7 +10,7 @@ Created by Jordan Walke in Facebook.
 React.js is declarative because it describes what the UI should look like rather than how to achieve it. This makes the code easier to read and maintain, as it is more focused on the end result rather than the steps involved in gettig there.
 
 Example:
-_Rect.js_
+_React.js_
 In react you don't need to define the element manualy how to execute it. This is declarative.
 
 <!--
@@ -29,3 +29,23 @@ element.textContent = `Hello ${name}!`;
 return element;
 }
 -->
+
+# Installing and Creating a react application
+
+Step 1: Install node
+Link: https://nodejs.org/en/download
+Install node from the link (Select the latest version with LTS so that no issues occur.)
+
+Step 2: Install bun (Package Manager)
+Bun is a fast Javascript runtime.
+Run the following command in the terminal to install bun globally: npm i -g bun
+
+Step 3: Create react app using vite
+Run the following command in the terminal: bun create vite
+Give the project name: "Name of the project"
+Select framework: "React"
+Select Variant: "Javascript"
+Follow the further steps to create your react app.
+
+Step 4: Run the React application
+Run the following command to run the project: bun dev.
