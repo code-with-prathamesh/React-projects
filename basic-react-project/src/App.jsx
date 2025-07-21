@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Each JSX expression must have one parent element, which means if you try to return multiple elements, React will throw an error.
 
-function App() {
-  const [count, setCount] = useState(0)
-
+//Every JSX tag needs to be closed. You can use self-closing tags for elements that don't have children, e.g., <img src="url" />
+const App = () => {
   return (
-    <>
+    <div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img
+          src="stranger_things.jpg"
+          alt="stranger_things.jpg"
+          width="50%"
+          height="50%"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <h1>Name: Stranger Things</h1>
+      <h3>Ratings: 8.9</h3>
+      <p>
+        Summary: In 1980s Indiana, a group of young friends witness supernatural
+        forces and secret government exploits. As they search for answers, the
+        children unravel a series of extraordinary mysteries.
       </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
