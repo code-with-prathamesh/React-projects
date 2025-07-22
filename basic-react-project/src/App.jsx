@@ -4,20 +4,33 @@
 
 const App = () => {
   return (
-    <div>
+    <>
       <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
       <NetflixSeries />
-    </div>
+    </>
   );
 };
 
 const NetflixSeries = () => {
+  /*Setting values dynamically
+   1. Variables
+   You can embed any javascript variable within JSX by enclosing it in curly braces. The value of the variable wil be inserted into the DOM at the respective location.*/
+  const name = "Stranger Things";
+  const summary =
+    "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.";
+  /* 3. Funtion Calls 
+  Functions especially those that return JSX, can be invoked directly within your JSX */
+  const returnGenre = () => {
+    const genre = "Sci-Fci";
+    return genre;
+  };
+
   return (
-    <div>
+    <>
       <div>
         <img
           src="stranger_things.jpg"
@@ -26,14 +39,14 @@ const NetflixSeries = () => {
           height="50%"
         />
       </div>
-      <h1>Name: Stranger Things</h1>
-      <h3>Ratings: 8.9</h3>
-      <p>
-        Summary: In 1980s Indiana, a group of young friends witness supernatural
-        forces and secret government exploits. As they search for answers, the
-        children unravel a series of extraordinary mysteries.
-      </p>
-    </div>
+      <h1>Name: {name}</h1>
+      {/* 2. Expressions
+          JSX allows you to write javascript expressins inside curly braces. This includes operations, function calls, and other Javascript expessions that produce a value. */}
+      <h3>Ratings: {5 + 3.9}</h3>
+      <p>Summary: {summary}</p>
+
+      <h4>Genre: {returnGenre()}</h4>
+    </>
   );
 };
 
