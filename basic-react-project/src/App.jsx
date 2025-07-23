@@ -22,6 +22,8 @@ const NetflixSeries = () => {
   const name = "Stranger Things";
   const summary =
     "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.";
+
+  let age = 25;
   /* 3. Funtion Calls 
   Functions especially those that return JSX, can be invoked directly within your JSX */
   const returnGenre = () => {
@@ -44,8 +46,8 @@ const NetflixSeries = () => {
           JSX allows you to write javascript expressins inside curly braces. This includes operations, function calls, and other Javascript expessions that produce a value. */}
       <h3>Ratings: {5 + 3.9}</h3>
       <p>Summary: {summary}</p>
-
       <h4>Genre: {returnGenre()}</h4>
+      <button>{age < 18 ? "Not Available" : "Watch Now"}</button>
     </>
   );
 };
