@@ -1,36 +1,34 @@
+import seriesData from "../api/seriesData.json";
+
 export const NetflixSeries = () => {
-  /*Setting values dynamically
-   1. Variables
-   You can embed any javascript variable within JSX by enclosing it in curly braces. The value of the variable wil be inserted into the DOM at the respective location.*/
-  const name = "Stranger Things";
-  const summary =
-    "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.";
-
-  let age = 25;
-  /* 3. Funtion Calls 
-  Functions especially those that return JSX, can be invoked directly within your JSX */
-  const returnGenre = () => {
-    const genre = "Sci-Fci";
-    return genre;
-  };
-
   return (
     <>
-      <div>
-        <img
-          src="stranger_things.jpg"
-          alt="stranger_things.jpg"
-          width="50%"
-          height="50%"
-        />
-      </div>
-      <h1>Name: {name}</h1>
-      {/* 2. Expressions
+      <ul>
+        {seriesData.map((currElem) => {
+          return (
+            <li key={currElem.id}>
+              <div>
+                <img
+                  src={currElem.img_url}
+                  alt={currElem.name}
+                  width="50%"
+                  height="50%"
+                />
+              </div>
+              <h1>Name: {currElem.name}</h1>
+              {/* 2. Expressions
           JSX allows you to write javascript expressins inside curly braces. This includes operations, function calls, and other Javascript expessions that produce a value. */}
-      <h3>Ratings: {5 + 3.9}</h3>
-      <p>Summary: {summary}</p>
-      <h4>Genre: {returnGenre()}</h4>
-      <button>{age < 18 ? "Not Available" : "Watch Now"}</button>
+              <h3>Ratings: {currElem.rating}</h3>
+              <p>Summary: {currElem.description}</p>
+              <p>Genre: {currElem.genre}</p>
+              <p>Cast: {currElem.cast}</p>
+              <a href={currElem.watch_url} target="_blank">
+                <button>Watch Now</button>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
