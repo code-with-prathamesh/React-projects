@@ -20,7 +20,7 @@ return <div>Hello, {name}!</div>;
 -->
 
 _Javascript_
-In javascript you need to define the element manualy how to execute it. This is imperative.
+In javascript you need to define the element manually how to execute it. This is imperative.
 
 <!--
 function MyComponent(name) {
