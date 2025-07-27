@@ -1,5 +1,6 @@
 import { NetflixSeries } from "./components/NetflixSeries";
-import "./components/Netflix.css";
+// import "./components/Netflix.css";
+import styles from "./components/Netflix.module.css";
 
 // import { Profile } from "./components/Profile";
 
@@ -9,7 +10,7 @@ const App = () => {
   //Every JSX tag needs to be closed. You can use self-closing tags for elements that don't have children, e.g., <img src="url" />
   return (
     <section className="container">
-      <h1 className="card-heading">List of Best Netflix Series</h1>
+      <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1>
       <NetflixSeries />
       {/* <Profile /> */}
     </section>
