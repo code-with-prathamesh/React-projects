@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { State } from "./hooks/State";
+import { DerivedState } from "./components/DerivedState";
+// import { State } from "./hooks/State";
 // import { EventPropogation } from "./components/EventPropogation";
 // import App from "./App.jsx";
 // import { EventProps } from "./components/EventProps.jsx";
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
     {/* <EventHandling /> */}
     {/* <EventProps /> */}
     {/* <EventPropogation /> */}
-    <State />
+    {/* <State /> */}
+    <DerivedState />
   </StrictMode>
 );
