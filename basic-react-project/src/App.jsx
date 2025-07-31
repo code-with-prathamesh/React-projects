@@ -1,20 +1,7 @@
-import { NetflixSeries } from "./components/NetflixSeries";
-// import "./components/Netflix.css";
-import styles from "./components/Netflix.module.css";
-
-// import { Profile } from "./components/Profile";
+import { ToggleSwitch } from "./projects/ToggleSwitch/ToggleSwitch";
 
 const App = () => {
-  // Each JSX expression must have one parent element, which means if you try to return multiple elements, React will throw an error.
-
-  //Every JSX tag needs to be closed. You can use self-closing tags for elements that don't have children, e.g., <img src="url" />
-  return (
-    <section className="container">
-      <h1 className={styles["card-heading"]}>List of Best Netflix Series</h1>
-      <NetflixSeries />
-      {/* <Profile /> */}
-    </section>
-  );
+  return <ToggleSwitch />;
 };
 
 export default App;
